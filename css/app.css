@@ -168,7 +168,7 @@ div[name="sect"] {
 
 
 div.personalInfo {
-	display: none;
+	display: ;
 }
 
 
@@ -198,6 +198,7 @@ div.plan {
 div#selectedPlan {
 	background: var(--pastelBlue);
 	border-color: var(--purplishBlue);
+	display: none;
 }
 
 
