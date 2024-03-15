@@ -172,6 +172,11 @@ div.personalInfo {
 }
 
 
+div.planSelection {
+	display: none;
+}
+
+
 button.btn1 {
 	margin: 6rem 0 0;
 	position: absolute;
