@@ -1,0 +1,222 @@
+:root {
+	--marineBlue: hsl(213, 96%, 18%);
+	--purplishBlue: hsl(243, 100%, 62%);
+	--pastelBlue: hsl(228, 100%, 84%);
+	--lightBlue: hsl(206, 94%, 87%);
+	--strawberryRed: hsl(354, 84%, 57%);
+	--coolGray: hsl(231, 11%, 63%);
+	--lightGray: hsl(229, 24%, 87%);
+	--magnolia: hsl(217, 100%, 97%);
+	--alabaster: hsl(231, 100%, 99%);
+	--white: hsl(0, 0%, 100%);	
+}
+
+
+* {
+	color: var(--marineBlue);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: puppins;
+	outline: none;
+}
+
+
+h2 {
+	font-size: 1.48rem;
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+
+
+p {
+	color: var(--coolGray);
+	margin: 10px 0 0;
+	width: 97%;
+	font-size: 15.7px;
+	line-height: 1.4rem;
+}
+
+
+
+img {
+	display: inline-block;
+	object-fit: contain;
+	object-position: center;
+}
+
+
+button {
+	background: var(--marineBlue);
+	color: var(--alabaster);
+	padding: 10px 16px;
+	font-size: 13px;
+	font-weight: 500;
+	border: 0;
+	border-radius: 4px;
+	transition: opacity .5s;
+}
+
+
+button:hover {
+	opacity: .8;
+}
+
+
+label {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+
+input {
+	color: var(--marineBlue);
+	padding: 9px 2% 9px 4%;
+	display: block;
+	width: 100%;
+	font-weight: 500;
+	border: 1.5px solid var(--lightGray);
+	border-radius: 4px;
+}
+
+
+input:hover, input:focus {
+	border: 1.5px solid var(--purplishBlue);
+}
+
+
+input::placeholder {
+	color: var(--coolGray);
+	font-weight: 500;
+}
+
+
+[name="pointer"] {
+	cursor: pointer;
+}
+
+
+body {
+	background: var(--magnolia);
+}
+
+
+
+picture img {
+	width: 100%;
+}
+
+
+div.steps {
+	margin: 0 auto;
+	width: 11.2rem;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	top: -8.8rem;
+}
+
+
+div.step div {
+	display: none;
+}
+
+span.step {
+	color: var(--alabaster);
+	height: 1.85rem;		width: 1.85rem;
+	display: flex;
+	font-size: 13px;
+	font-weight: 700;
+	justify-content: space-around;
+	align-items: center;
+	border: 1px solid var(--alabaster);
+	border-radius: 50%;
+}
+
+
+span#presentStep {
+	color: var(--marineBlue);
+	background: var(--lightBlue);
+}
+
+
+div.label {
+	margin: 1rem 0 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+div.label span {
+	color: var(--strawberryRed);
+	font-size: 13px;
+	font-weight: 600;
+	display: none;
+}
+
+div[name="sect"] {
+	background: var(--white);
+	margin: -6.6rem auto 8rem;
+	padding: 2rem 6.4%;
+	width: 92%;
+	border-radius: 10px;
+	position: relative;
+	z-index: 10;
+}
+
+
+div.personalInfo {
+	display: none;
+}
+
+
+button.btn1 {
+	margin: 6rem 0 0;
+	position: absolute;
+	right: 0;
+}
+
+
+
+div.plans {
+
+}
+
+
+div.plan {
+	margin: 1rem 0 0;
+	padding: 1rem 14px;
+	display: flex;
+	align-items: center;
+	border: 1.5px solid var(--lightGray);
+	border-radius: 10px;
+}
+
+
+div#selectedPlan {
+	background: var(--pastelBlue);
+	border-color: var(--purplishBlue);
+}
+
+
+div.plans div.plan div {
+	margin: 0 0 0 14px;
+	height: 2.3rem;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+
+div.plans div.plan div span:nth-of-type(1) {
+	font-size: 15px;
+	font-weight: 700;
+}
+
+
+div.plans div.plan div span:nth-of-type(2) {
+	color: var(--coolGray);
+	font-size: 15px;
+}
