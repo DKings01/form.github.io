@@ -20,7 +20,7 @@
 			<div class="steps" >
 				
 				<div class="step" >
-					<span class="step" id="presentStep" >1</span>
+					<span class="step1" id="presentStep" name="step" >1</span>
 					
 					<div>
 						<span>STEP 1</span>
@@ -29,7 +29,7 @@
 				</div>
 				
 				<div class="step" >
-					<span class="step" >2</span>
+					<span class="step2" name="step" >2</span>
 					
 					<div>
 						<span>STEP 2</span>
@@ -38,7 +38,7 @@
 				</div>
 				
 				<div class="step" >
-					<span class="step" >3</span>
+					<span class="step3" name="step" >3</span>
 					
 					<div>
 						<span>STEP 3</span>
@@ -47,7 +47,7 @@
 				</div>
 				
 				<div class="step" >
-					<span class="step" >4</span>
+					<span class="step4" name="step" >4</span>
 					
 					<div>
 						<span>STEP 4</span>
@@ -59,7 +59,7 @@
 			
 			
 			
-			<div class="personalInfo" name="sect"  >
+			<div class="personalInfo" id="step1"  name="sect" >
 				<h2>Personal info</h2>
 				
 				<p>Please provide your name, email address and phone number.</p>
@@ -87,27 +87,157 @@
 			
 			
 			
-			<div class="planSelection" name="sect" >
+			<div class="planSelection" id="step2"  name="sect" >
 				<h2>Select your plan</h2>	
 				
 				<p>You have the option of monthly or yearly billing.</p>
 				
 				<div class="plans" >
-					<div class="plan" id="selectedPlan" >
+				
+					<div class="plan" id="selectedPlan" name="pointer" onclick="selectPlan(this)" >
 						<img src="images/icon-arcade.svg" >
 						
-						<div>
+						<div class="divPlanDivI" >
 							<span>Archade</span>
 							<span>$9/mo</span>
+							<span class="freeInfoI" >2 months free</span>
 						</div>
 					</div>
+					
+					
+					<div class="plan" name="pointer" onclick="selectPlan(this)" >
+						<img src="images/icon-advanced.svg" >
+						
+						<div class="divPlanDivII" >
+							<span>Advanced</span>
+							<span>$12/mo</span>
+							<span class="freeInfoII" >2 months free</span>
+						</div>
+					</div>
+					
+					
+					<div class="plan" name="pointer" onclick="selectPlan(this)" >
+						<img src="images/icon-pro.svg" >
+						
+						<div class="divPlanDivIII" >
+							<span>Pro</span>
+							<span>$15/mo</span>
+							<span class="freeInfoIII" >2 months free</span>	
+						</div>
+					</div>
+						
+				</div>
+				
+				
+				<div class="switchMoYr" >
+					<span id="selectedPlanDuration" name="pointer" onclick="selectPlanDuration(this)" >Monthly</span>
+					
+					<span class="switch" ><span></span></span>
+					
+					<span name="pointer" onclick="selectPlanDuration(this)" >Yearly</span>
+				</div>
+				
+				
+				<div class="nxtPrv" >
+					<span id="step22" onclick="toPreviousStep(this)" name="pointer" >Go Back</span>
+					<button id="step2" onclick="toNextStep(this)" name="pointer" >Next Step</button>
 				</div>
 			</div>
 			
 			
 			
 			
+			<div class="pickAddOn" id="step3"  name="sect" >
+				<h2>Pick add-ons</h2>
+				
+				<p>Add-ons help enhance your gaming experience.</p>
+				
+				
+				<div class="add-on" value="val1" name="pointer" onclick="pickAddOn(this)" order="1" >
+					<img src="images/icon-checkmark.svg" class="checkmark" >
+					
+					<div>
+						<span class="name1" >Online service</span>
+						<span>Access to multiplayer games</span>
+					</div>
+					
+					<span class="add-onVal" id="val1" >+$1/mo</span>
+				</div>
+				
+				
+				<div class="add-on" value="val2" name="pointer" onclick="pickAddOn(this)" order="2" >
+					<img src="images/icon-checkmark.svg" class="checkmark" >
+					
+					<div>
+						<span class="name2" >Larger storage</span>
+						<span>Extra 1TB of cloud save</span>
+					</div>
+					
+					<span class="add-onVal" id="val2" >+$2/mo</span>
+				</div>
+				
+				
+				<div class="add-on" value="val3" name="pointer" onclick="pickAddOn(this)" order="3" >
+					<img src="images/icon-checkmark.svg" class="checkmark" >
+					
+					<div>
+						<span class="name3" >Customizable profile</span>
+						<span>Custom theme on your profile</span>
+					</div>
+					
+					<span class="add-onVal" id="val3" >+$2/mo</span>
+				</div>
+				
+				
+				<div class="nxtPrv" >
+					<span id="step33" onclick="toPreviousStep(this)" name="pointer" >Go Back</span>
+					<button id="step3" onclick="toNextStep(this)" name="pointer" >Next Step</button>
+				</div>
+			</div>
+			
+			
+			
+			
+			<div class="summary" id="step4"  name="sect" >
+				<h2>Finishing up</h2>
+				
+				<p>Double-check everything looks OK before confirming.</p>
+				
+				<div class="summ" >
+					<div class="st" >
+						<div>
+							<span>Archade (Monthly)</span>
+							<span name="pointer" >Change</span>
+						</div>
+						
+						<span class="val" >$9/mo</span>
+					</div>
+				</div>
+				
+				
+				<div class="total" >
+					<span>Total (per month)</span>
+					<span>+$12/mo</span>
+				</div>
+				
+				<div class="nxtPrv" >
+					<span id="step44" onclick="toPreviousStep(this)" name="pointer" >Go Back</span>
+					<button class="confirm" onclick="confirm()" name="pointer" >Confirm</button>
+				</div>
+			</div>
+			
+			
+			<div class="thankYou" name="sect" >
+				<img src="images/icon-thank-you.svg" >
+				
+				<h2>Thank you!</h2>
+				
+				<p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+			</div>
+			
 		</section>
 	
+	
+		
 	</body>
 </html>
